@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 20px 25px 40px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+}
+
+button {
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.recent-searches {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.recent-searches button {
+  background: #e7e7e7;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recent-searches button:hover {
+  background: #007bff;
+  color: white;
+}
+
+.weather-container {
+  margin-top: 20px;
+}
+
+.current-weather {
+  background: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.current-weather h2 {
+  margin-bottom: 10px;
+}
+
+.current-weather p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.forecast {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.forecast-day {
+  background: #e7f0ff;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 calc(20% - 10px);
+  min-width: 100px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.forecast-day h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.forecast-day img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.forecast-day p {
+  margin: 4px 0;
+}
+
+.error-message {
+  margin-top: 20px;
+  color: #ff4c4c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .forecast {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .forecast-day {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+}
